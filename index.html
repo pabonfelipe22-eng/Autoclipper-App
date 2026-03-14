@@ -1,69 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>AutoClipper</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AutoClipper App</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
+<body class="bg-gray-950 text-white">
 
-<header>
-<h1>AutoClipper</h1>
-<p>Automatically turn streams into viral clips</p>
+<!-- NAVBAR -->
+
+<header class="flex justify-between items-center px-10 py-6">
+
+<div class="flex items-center space-x-3">
+<img src="logo.png" class="w-10">
+<span class="text-xl font-bold">AutoClipper</span>
+</div>
+
+<nav class="space-x-6 text-gray-300">
+<a href="#features" class="hover:text-white">Features</a>
+<a href="#how" class="hover:text-white">How it Works</a>
+</nav>
+
 </header>
 
-<section class="hero">
+<!-- HERO -->
 
-<h2>Create TikTok clips automatically</h2>
+<section class="text-center mt-20 px-6">
 
-<p>
-AutoClipper is a tool that automatically finds the best clips from streamers
-and publishes them to TikTok using the official API.
+<h1 class="text-6xl font-bold leading-tight">
+Turn TikTok Videos Into  
+<span class="text-pink-500">Viral Clips Automatically</span>
+</h1>
+
+<p class="text-gray-400 mt-6 max-w-xl mx-auto text-lg">
+AutoClipper uses AI to detect the best moments in your TikTok videos and automatically generate viral-ready clips.
 </p>
 
-<button onclick="login()">Login with TikTok</button>
+<div class="mt-10">
 
-</section>
+<button onclick="login()" class="flex items-center space-x-3 bg-black border border-gray-700 hover:border-pink-500 px-6 py-3 rounded-xl mx-auto">
 
-<section>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" class="w-5">
 
-<h2>How it works</h2>
+<span>Login with TikTok</span>
 
-<div class="features">
-
-<div>
-<h3>1. Detect Clips</h3>
-<p>AutoClipper scans streamers and finds trending moments.</p>
-</div>
-
-<div>
-<h3>2. Download</h3>
-<p>The bot downloads clips automatically.</p>
-</div>
-
-<div>
-<h3>3. Edit</h3>
-<p>Clips are formatted for vertical TikTok content.</p>
-</div>
-
-<div>
-<h3>4. Upload</h3>
-<p>Videos are uploaded directly using the TikTok API.</p>
-</div>
+</button>
 
 </div>
 
 </section>
 
-<footer>
+<!-- FEATURES -->
 
-<a href="terms.html">Terms and Conditions</a>
-<a href="privacy.html">Privacy Policy</a>
+<section id="features" class="mt-32 px-10">
+
+<h2 class="text-4xl font-bold text-center mb-16">
+Powerful AI Features
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="bg-gray-900 p-8 rounded-2xl">
+<h3 class="text-xl font-semibold mb-3">AI Clip Detection</h3>
+<p class="text-gray-400">
+Automatically detects the most engaging moments in your TikTok videos.
+</p>
+</div>
+
+<div class="bg-gray-900 p-8 rounded-2xl">
+<h3 class="text-xl font-semibold mb-3">Auto Viral Editing</h3>
+<p class="text-gray-400">
+Create perfectly timed clips optimized for social media algorithms.
+</p>
+</div>
+
+<div class="bg-gray-900 p-8 rounded-2xl">
+<h3 class="text-xl font-semibold mb-3">Creator Analytics</h3>
+<p class="text-gray-400">
+Track performance and discover which clips go viral.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="how" class="mt-32 px-10">
+
+<h2 class="text-4xl font-bold text-center mb-16">
+How It Works
+</h2>
+
+<div class="grid md:grid-cols-3 gap-12 text-center">
+
+<div>
+<div class="text-pink-500 text-4xl font-bold mb-4">1</div>
+<p class="text-gray-400">
+Login securely using your TikTok account.
+</p>
+</div>
+
+<div>
+<div class="text-pink-500 text-4xl font-bold mb-4">2</div>
+<p class="text-gray-400">
+AutoClipper scans your videos using AI.
+</p>
+</div>
+
+<div>
+<div class="text-pink-500 text-4xl font-bold mb-4">3</div>
+<p class="text-gray-400">
+Generate optimized viral clips automatically.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="mt-32 border-t border-gray-800 py-10 text-center text-gray-500">
+
+<p class="mb-4">© 2026 AutoClipper</p>
+
+<a href="privacy.html" class="mx-3 hover:text-white">Privacy Policy</a>
+<a href="terms.html" class="mx-3 hover:text-white">Terms of Service</a>
 
 </footer>
 
-<script src="App.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
