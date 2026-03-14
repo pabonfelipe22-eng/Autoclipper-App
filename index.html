@@ -2,288 +2,281 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AutoClipper AI</title>
+<title>AutoClipper App</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.6);
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-weight:bold;
+font-size:15px;
+}
+
+header{
+text-align:center;
+padding:120px 20px 80px 20px;
+}
+
+h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:20px;
+opacity:0.9;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:35px;
+border-radius:12px;
+margin-top:30px;
+backdrop-filter: blur(10px);
+}
+
+.section{
+padding-top:80px;
+}
+
+.tiktok-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#fe2c55;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+}
+
+.tiktok-btn:hover{
+background:#ff4d73;
+transform:scale(1.05);
+}
+
+footer{
+margin-top:80px;
+padding:40px;
+text-align:center;
+background:rgba(0,0,0,0.4);
+}
+
+ul{
+line-height:1.8;
+}
+
+</style>
 
 </head>
 
-<body class="bg-gray-950 text-white">
+<body>
 
-<!-- NAVBAR -->
+<nav>
 
-<header class="border-b border-gray-800">
-
-<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
-
-<div class="flex items-center space-x-3">
-<img src="logo.png" class="w-10">
-<span class="text-xl font-bold">AutoClipper</span>
-</div>
-
-<nav class="space-x-6 text-gray-300">
-
-<a href="#features" class="hover:text-white">Features</a>
-<a href="#how" class="hover:text-white">How it Works</a>
-<a href="#integration" class="hover:text-white">Integration</a>
-<a href="privacy.html" class="hover:text-white">Privacy</a>
-<a href="terms.html" class="hover:text-white">Terms</a>
+<a href="#">Home</a>
+<a href="#terms">Terms</a>
+<a href="#privacy">Privacy</a>
 
 </nav>
 
-</div>
+<header>
+
+<h1>AutoClipper</h1>
+
+<p class="subtitle">
+Automate your TikTok content publishing using the official TikTok API
+</p>
+
+<a class="tiktok-btn"
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=aw5hxji3xptu7r10&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callbackk&state=12345">
+
+Login with TikTok
+
+</a>
 
 </header>
 
-<!-- HERO -->
+<div class="container">
 
-<section class="text-center py-28 px-6">
+<div class="card">
 
-<div class="max-w-4xl mx-auto">
+<h2>About AutoClipper</h2>
 
-<h1 class="text-5xl md:text-6xl font-bold leading-tight">
-
-Turn TikTok Videos Into  
-<span class="text-pink-500">Viral Clips Automatically</span>
-
-</h1>
-
-<p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
-
-AutoClipper uses AI to detect the most engaging moments in your TikTok videos and generate high-performing clips ready for publishing.
-
+<p>
+AutoClipper is a web tool designed to help creators automate the process of publishing short-form video content to TikTok using the official TikTok APIs.
 </p>
 
-<!-- LOGIN BUTTON -->
+<p>
+Users can securely connect their TikTok account using TikTok Login Kit and authorize the platform to publish videos on their behalf through the Content Posting API.
+</p>
 
-<div class="mt-10 flex justify-center">
+<h3>Features</h3>
 
-<button onclick="login()" 
-class="flex items-center gap-3 bg-black border border-gray-700 hover:border-pink-500 hover:bg-gray-900 px-7 py-3 rounded-lg font-semibold transition">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" class="w-5">
-
-Continue with TikTok
-
-</button>
+<ul>
+<li>Secure login using TikTok Login Kit</li>
+<li>Automated video publishing</li>
+<li>Integration with TikTok Content Posting API</li>
+<li>Simple and efficient content automation workflow</li>
+</ul>
 
 </div>
 
-<p class="text-gray-500 text-sm mt-4 max-w-lg mx-auto">
+</div>
 
-AutoClipper uses TikTok Login to securely authenticate creators and access basic account information.
+<section id="terms" class="container section">
 
+<div class="card">
+
+<h2>Terms of Service</h2>
+
+<p>
+By accessing and using AutoClipper, you agree to comply with and be bound by the following Terms of Service. If you do not agree with these terms, you should not use this service.
+</p>
+
+<h3>Use of the Service</h3>
+
+<p>
+AutoClipper provides tools that allow users to automate the process of publishing video content to TikTok using the official TikTok APIs. The user is solely responsible for the content they upload and publish through the platform.
+</p>
+
+<h3>User Accounts</h3>
+
+<p>
+To use certain features of the service, users must authenticate using TikTok Login Kit. Users are responsible for maintaining the security of their account and for any activity that occurs under their authorization.
+</p>
+
+<h3>Content Ownership</h3>
+
+<p>
+Users retain full ownership and rights to the content they upload through AutoClipper. The platform does not claim ownership over any content published using the service.
+</p>
+
+<h3>Prohibited Use</h3>
+
+<p>
+Users may not use the platform to publish illegal, harmful, misleading, or infringing content that violates TikTok policies or applicable laws.
+</p>
+
+<h3>Service Availability</h3>
+
+<p>
+We reserve the right to modify, suspend, or discontinue the service at any time without prior notice.
+</p>
+
+<h3>Limitation of Liability</h3>
+
+<p>
+AutoClipper shall not be held responsible for any loss, damages, or account restrictions resulting from misuse of the service or violations of TikTok's platform policies.
 </p>
 
 </div>
 
 </section>
 
-<!-- FEATURES -->
+<section id="privacy" class="container section">
 
-<section id="features" class="py-24 px-6">
+<div class="card">
 
-<div class="max-w-6xl mx-auto">
+<h2>Privacy Policy</h2>
 
-<h2 class="text-4xl font-bold text-center mb-16">
-Powerful AI Features
-</h2>
-
-<div class="grid md:grid-cols-3 gap-10">
-
-<div class="bg-gray-900 p-8 rounded-xl">
-<h3 class="text-xl font-semibold mb-3">AI Clip Detection</h3>
-<p class="text-gray-400">
-Automatically detects the most engaging moments in your TikTok videos.
+<p>
+AutoClipper respects the privacy of its users and is committed to protecting their personal information.
 </p>
-</div>
 
-<div class="bg-gray-900 p-8 rounded-xl">
-<h3 class="text-xl font-semibold mb-3">Automatic Editing</h3>
-<p class="text-gray-400">
-Clips are edited and optimized for better reach and engagement.
+<h3>Information We Collect</h3>
+
+<p>
+When users authenticate with TikTok Login Kit, we may receive limited information from TikTok depending on the permissions granted by the user.
 </p>
-</div>
 
-<div class="bg-gray-900 p-8 rounded-xl">
-<h3 class="text-xl font-semibold mb-3">Creator Analytics</h3>
-<p class="text-gray-400">
-Track clip performance and discover what works best.
+<ul>
+
+<li>Basic user profile information (user.info.basic)</li>
+<li>Permission to publish videos (video.publish)</li>
+<li>Permission to upload videos (video.upload)</li>
+
+</ul>
+
+<h3>How We Use This Information</h3>
+
+<p>
+The information collected is used solely for the following purposes:
 </p>
-</div>
 
-</div>
+<ul>
+
+<li>Authenticating users through TikTok Login Kit</li>
+<li>Allowing users to publish videos via TikTok Content Posting API</li>
+<li>Improving the functionality and reliability of the platform</li>
+
+</ul>
+
+<h3>Data Protection</h3>
+
+<p>
+We implement reasonable security measures designed to protect user information from unauthorized access, disclosure, or misuse.
+</p>
+
+<h3>Third-Party Sharing</h3>
+
+<p>
+AutoClipper does not sell, trade, or rent users’ personal information to third parties.
+</p>
+
+<h3>Policy Updates</h3>
+
+<p>
+This Privacy Policy may be updated periodically to reflect changes in our services or legal requirements.
+</p>
 
 </div>
 
 </section>
 
-<!-- HOW IT WORKS -->
+<footer>
 
-<section id="how" class="py-24 px-6 bg-gray-900">
+<p>© 2026 AutoClipper</p>
 
-<div class="max-w-6xl mx-auto">
+<p>
 
-<h2 class="text-4xl font-bold text-center mb-16">
-How It Works
-</h2>
-
-<div class="grid md:grid-cols-3 gap-12 text-center">
-
-<div>
-
-<div class="text-pink-500 text-4xl font-bold mb-4">
-1
-</div>
-
-<p class="text-gray-400">
-Login securely using your TikTok account.
-</p>
-
-</div>
-
-<div>
-
-<div class="text-pink-500 text-4xl font-bold mb-4">
-2
-</div>
-
-<p class="text-gray-400">
-AutoClipper analyzes your videos using AI to detect viral moments.
-</p>
-
-</div>
-
-<div>
-
-<div class="text-pink-500 text-4xl font-bold mb-4">
-3
-</div>
-
-<p class="text-gray-400">
-Generate clips and publish them to TikTok with your approval.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TIKTOK INTEGRATION -->
-
-<section id="integration" class="py-24 px-6">
-
-<div class="max-w-6xl mx-auto text-center">
-
-<h2 class="text-4xl font-bold mb-10">
-TikTok Integration
-</h2>
-
-<p class="text-gray-400 max-w-2xl mx-auto mb-14">
-
-AutoClipper integrates with TikTok's official APIs to allow creators to securely
-connect their accounts, generate clips, and optionally publish edited content
-directly to TikTok.
+<a href="#terms">Terms of Service</a> |
+<a href="#privacy">Privacy Policy</a>
 
 </p>
-
-<div class="grid md:grid-cols-3 gap-10">
-
-<div class="bg-gray-900 p-8 rounded-xl">
-
-<h3 class="text-xl font-semibold mb-3">
-Secure Login
-</h3>
-
-<p class="text-gray-400">
-
-Creators authenticate using TikTok Login to securely connect their accounts.
-
-</p>
-
-</div>
-
-<div class="bg-gray-900 p-8 rounded-xl">
-
-<h3 class="text-xl font-semibold mb-3">
-Video Upload
-</h3>
-
-<p class="text-gray-400">
-
-Generated clips can be uploaded to TikTok using the official API.
-
-</p>
-
-</div>
-
-<div class="bg-gray-900 p-8 rounded-xl">
-
-<h3 class="text-xl font-semibold mb-3">
-Content Publishing
-</h3>
-
-<p class="text-gray-400">
-
-Users may publish clips directly to their TikTok accounts with their approval.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- API PERMISSIONS -->
-
-<section class="py-16 text-center">
-
-<p class="text-gray-500 text-sm">
-
-This application uses TikTok APIs with the following permissions:
-<strong>user.info.basic</strong>,
-<strong>video.upload</strong>,
-<strong>video.publish</strong>.
-
-</p>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="border-t border-gray-800 py-10">
-
-<div class="max-w-6xl mx-auto text-center text-gray-500">
-
-<p class="mb-4">© 2026 AutoClipper</p>
-
-<div class="space-x-6">
-
-<a href="privacy.html" class="hover:text-white">
-Privacy Policy
-</a>
-
-<a href="terms.html" class="hover:text-white">
-Terms of Service
-</a>
-
-</div>
-
-</div>
 
 </footer>
 
-<script src="app.js"></script>
-
 </body>
+
 </html>
