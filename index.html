@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AutoClipper App</title>
+<title>AutoClipper</title>
 
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
 margin:0;
+font-family:Arial, Helvetica, sans-serif;
 background: linear-gradient(120deg,#0f2027,#203a43,#2c5364);
 color:white;
 }
@@ -31,7 +32,7 @@ color:white;
 margin:0 20px;
 text-decoration:none;
 font-weight:bold;
-font-size:15px;
+cursor:pointer;
 }
 
 header{
@@ -56,15 +57,10 @@ padding:40px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.08);
 padding:35px;
 border-radius:12px;
-margin-top:30px;
-backdrop-filter: blur(10px);
-}
-
-.section{
-padding-top:80px;
+backdrop-filter:blur(10px);
 }
 
 .tiktok-btn{
@@ -86,10 +82,19 @@ transform:scale(1.05);
 }
 
 footer{
-margin-top:80px;
-padding:40px;
+margin-top:60px;
+padding:30px;
 text-align:center;
 background:rgba(0,0,0,0.4);
+}
+
+.legal-section{
+display:none;
+margin-top:40px;
+}
+
+.legal-section.active{
+display:block;
 }
 
 ul{
@@ -104,22 +109,22 @@ line-height:1.8;
 
 <nav>
 
-<a href="#">Home</a>
-<a href="#terms">Terms</a>
-<a href="#privacy">Privacy</a>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('terms')">Terms</a>
+<a onclick="showSection('privacy')">Privacy</a>
 
 </nav>
 
-<header>
+<header id="home">
 
 <h1>AutoClipper</h1>
 
 <p class="subtitle">
-Automate your TikTok content publishing using the official TikTok API
+Automate your TikTok content publishing
 </p>
 
 <a class="tiktok-btn"
-href="https://www.tiktok.com/v2/auth/authorize/?client_key=aw5hxji3xptu7r10&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callbackk&state=12345">
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=YOUR_CLIENT_KEY&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=https://yourdomain.com/callback&state=123">
 
 Login with TikTok
 
@@ -131,151 +136,163 @@ Login with TikTok
 
 <div class="card">
 
-<h2>About AutoClipper</h2>
+<h2>About the Platform</h2>
 
 <p>
-AutoClipper is a web tool designed to help creators automate the process of publishing short-form video content to TikTok using the official TikTok APIs.
+AutoClipper is a web tool designed to help creators automate the process of uploading and publishing short-form videos directly to TikTok using official developer APIs.
 </p>
 
-<p>
-Users can securely connect their TikTok account using TikTok Login Kit and authorize the platform to publish videos on their behalf through the Content Posting API.
-</p>
-
-<h3>Features</h3>
+<h3>TikTok Integration</h3>
 
 <ul>
-<li>Secure login using TikTok Login Kit</li>
-<li>Automated video publishing</li>
-<li>Integration with TikTok Content Posting API</li>
-<li>Simple and efficient content automation workflow</li>
+
+<li><b>Login Kit</b> — Allows users to securely authenticate with their TikTok account.</li>
+
+<li><b>Content Posting API</b> — Enables uploading and publishing videos directly to TikTok.</li>
+
+</ul>
+
+<h3>Permissions Requested</h3>
+
+<ul>
+
+<li><b>user.info.basic</b> — Access basic profile information.</li>
+
+<li><b>video.upload</b> — Upload videos through the platform.</li>
+
+<li><b>video.publish</b> — Publish uploaded videos.</li>
+
 </ul>
 
 </div>
 
-</div>
 
-<section id="terms" class="container section">
+<!-- TERMS -->
 
-<div class="card">
+<div id="terms" class="card legal-section">
 
 <h2>Terms of Service</h2>
 
 <p>
-By accessing and using AutoClipper, you agree to comply with and be bound by the following Terms of Service. If you do not agree with these terms, you should not use this service.
+By accessing or using AutoClipper, you agree to comply with these Terms of Service.
 </p>
 
-<h3>Use of the Service</h3>
+<h3>Use of Service</h3>
 
 <p>
-AutoClipper provides tools that allow users to automate the process of publishing video content to TikTok using the official TikTok APIs. The user is solely responsible for the content they upload and publish through the platform.
+The platform provides automation tools that allow users to upload and publish content to TikTok through official APIs.
 </p>
 
-<h3>User Accounts</h3>
+<h3>User Responsibility</h3>
 
 <p>
-To use certain features of the service, users must authenticate using TikTok Login Kit. Users are responsible for maintaining the security of their account and for any activity that occurs under their authorization.
+Users are responsible for the content they upload and must comply with TikTok’s policies and community guidelines.
 </p>
 
-<h3>Content Ownership</h3>
+<h3>Account Authorization</h3>
 
 <p>
-Users retain full ownership and rights to the content they upload through AutoClipper. The platform does not claim ownership over any content published using the service.
+Authentication occurs through TikTok Login Kit. By authorizing the application, users grant permission to upload and publish videos on their behalf.
 </p>
 
-<h3>Prohibited Use</h3>
+<h3>Restrictions</h3>
+
+<ul>
+
+<li>No illegal or copyrighted content without rights</li>
+<li>No harmful or misleading content</li>
+<li>No misuse of TikTok APIs</li>
+
+</ul>
+
+<h3>Service Changes</h3>
 
 <p>
-Users may not use the platform to publish illegal, harmful, misleading, or infringing content that violates TikTok policies or applicable laws.
-</p>
-
-<h3>Service Availability</h3>
-
-<p>
-We reserve the right to modify, suspend, or discontinue the service at any time without prior notice.
-</p>
-
-<h3>Limitation of Liability</h3>
-
-<p>
-AutoClipper shall not be held responsible for any loss, damages, or account restrictions resulting from misuse of the service or violations of TikTok's platform policies.
+We may modify or discontinue the service at any time without notice.
 </p>
 
 </div>
 
-</section>
 
-<section id="privacy" class="container section">
+<!-- PRIVACY -->
 
-<div class="card">
+<div id="privacy" class="card legal-section">
 
 <h2>Privacy Policy</h2>
 
 <p>
-AutoClipper respects the privacy of its users and is committed to protecting their personal information.
+AutoClipper values user privacy and is committed to protecting personal data.
 </p>
 
-<h3>Information We Collect</h3>
-
-<p>
-When users authenticate with TikTok Login Kit, we may receive limited information from TikTok depending on the permissions granted by the user.
-</p>
+<h3>Information Collected</h3>
 
 <ul>
 
-<li>Basic user profile information (user.info.basic)</li>
-<li>Permission to publish videos (video.publish)</li>
-<li>Permission to upload videos (video.upload)</li>
+<li>Basic TikTok profile information</li>
+<li>Authorization tokens required for API access</li>
 
 </ul>
 
-<h3>How We Use This Information</h3>
+<h3>How Data Is Used</h3>
 
 <p>
-The information collected is used solely for the following purposes:
+Collected data is used exclusively for authentication and video publishing functionality.
 </p>
 
-<ul>
-
-<li>Authenticating users through TikTok Login Kit</li>
-<li>Allowing users to publish videos via TikTok Content Posting API</li>
-<li>Improving the functionality and reliability of the platform</li>
-
-</ul>
-
-<h3>Data Protection</h3>
+<h3>Data Security</h3>
 
 <p>
-We implement reasonable security measures designed to protect user information from unauthorized access, disclosure, or misuse.
+We implement security practices to protect user information and prevent unauthorized access.
 </p>
 
-<h3>Third-Party Sharing</h3>
+<h3>Third Party Services</h3>
 
 <p>
-AutoClipper does not sell, trade, or rent users’ personal information to third parties.
+AutoClipper interacts with TikTok services through official APIs but does not sell or share user data.
 </p>
 
 <h3>Policy Updates</h3>
 
 <p>
-This Privacy Policy may be updated periodically to reflect changes in our services or legal requirements.
+This Privacy Policy may change periodically to reflect updates in service or legal requirements.
 </p>
 
 </div>
 
-</section>
+</div>
 
 <footer>
 
 <p>© 2026 AutoClipper</p>
 
 <p>
-
-<a href="#terms">Terms of Service</a> |
-<a href="#privacy">Privacy Policy</a>
-
+<a onclick="showSection('terms')">Terms of Service</a> |
+<a onclick="showSection('privacy')">Privacy Policy</a>
 </p>
 
 </footer>
+
+<script>
+
+function showSection(section){
+
+document.querySelectorAll(".legal-section").forEach(s=>{
+s.classList.remove("active")
+})
+
+if(section === "terms"){
+document.getElementById("terms").classList.add("active")
+}
+
+if(section === "privacy"){
+document.getElementById("privacy").classList.add("active")
+}
+
+window.scrollTo({top:300,behavior:"smooth"})
+
+}
+
+</script>
 
 </body>
 
