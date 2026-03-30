@@ -1,6 +1,6 @@
 function login(){
 
-const client_key = "aw5hxji3xptu7r10";
+const client_key = "sbawdhen20iae53fn5";
 
 const redirect_uri = "https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callback";
 
