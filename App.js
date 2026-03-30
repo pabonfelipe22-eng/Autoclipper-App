@@ -2,7 +2,7 @@ function login(){
 
 const client_key = "sbawdhen20iae53fn5";
 
-const redirect_uri = "https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callback";
+const redirect_uri = "https://pabonfelipe22-eng.github.io/Autoclipper-App/";
 
 const scope = "user.info.basic,video.list";
 
