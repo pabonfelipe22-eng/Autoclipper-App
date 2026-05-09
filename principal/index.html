@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AutoClipper-App</title>
+
+<link rel="icon" type="image/png" href="logo.png.jpeg">
+
+<style>
+
+body{
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 70px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+max-width:900px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-top:10px;
+}
+
+.tiktok-btn{
+margin-top:40px;
+padding:16px 45px;
+font-size:18px;
+border-radius:10px;
+background:#fe2c55;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.tiktok-btn:hover{
+background:#ff4d73;
+}
+
+/* CONTAINERS */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+/* BOX */
+
+.box{
+background:rgba(0,0,0,0.55);
+padding:40px;
+border-radius:14px;
+margin-top:40px;
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.feature{
+background:rgba(0,0,0,0.55);
+padding:30px;
+border-radius:14px;
+}
+
+/* STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.step{
+background:rgba(0,0,0,0.55);
+padding:30px;
+border-radius:14px;
+text-align:center;
+}
+
+.step-number{
+font-size:36px;
+font-weight:bold;
+color:#fe2c55;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:rgba(0,0,0,0.75);
+}
+
+footer a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
+
+footer a:hover{
+color:#ff4d73;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="logo">AutoClipper App</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Turn TikTok Videos Into Viral Clips Automatically</h1>
+
+<p>
+AutoClipper is a creator platform designed to help users upload and publish short-form video content directly to TikTok using official developer APIs.
+</p>
+
+<a class="tiktok-btn"
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawdhen20iae53fn5&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=https://pabonfelipe22-eng.github.io/Autoclipper-App/&state=123">
+
+Login with TikTok
+
+</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<div class="container">
+
+<div class="box">
+
+<h2>About the Platform</h2>
+
+<p>
+AutoClipper is a web platform designed to simplify the process of publishing short-form content directly to TikTok. The platform integrates with official TikTok developer tools allowing users to authenticate securely and upload videos to their TikTok accounts.
+</p>
+
+<h3>TikTok Integration</h3>
+
+<ul>
+<li><b>Login Kit</b> — Secure TikTok authentication</li>
+<li><b>Content Posting API</b> — Upload and publish videos</li>
+</ul>
+
+<h3>Permissions Requested</h3>
+
+<ul>
+<li>user.info.basic</li>
+<li>video.upload</li>
+<li>video.publish</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="container">
+
+<h2>Platform Features</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Secure Authentication</h3>
+<p>Login safely using TikTok's official OAuth system.</p>
+</div>
+
+<div class="feature">
+<h3>Direct Video Upload</h3>
+<p>Upload video content directly to TikTok.</p>
+</div>
+
+<div class="feature">
+<h3>Creator Workflow</h3>
+<p>Tools designed to simplify content publishing.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- HOW IT WORKS -->
+
+<div class="container">
+
+<h2>How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<p>Login securely using your TikTok account.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<p>Upload your video through the AutoClipper platform.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<p>Publish your video directly to TikTok.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- SECURITY -->
+
+<div class="container">
+
+<div class="box">
+
+<h2>Data Security</h2>
+
+<p>
+AutoClipper prioritizes user data protection. Authentication occurs through TikTok's official OAuth system and user credentials are never stored by the platform.
+</p>
+
+<p>
+All communications with TikTok APIs are performed through secure HTTPS connections.
+</p>
+
+</div>
+
+<div class="box">
+
+<h2>Developer Compliance</h2>
+
+<p>
+AutoClipper is developed in accordance with TikTok Developer Platform policies and only requests permissions required for core functionality.
+</p>
+
+</div>
+
+<div class="box">
+
+<h2>API Usage Transparency</h2>
+
+<p>
+The platform integrates the following TikTok technologies:
+</p>
+
+<ul>
+<li>TikTok Login Kit</li>
+<li>TikTok Content Posting API</li>
+</ul>
+
+<p>
+These APIs are used solely for authentication and publishing video content to the user’s TikTok account.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 AutoClipper Platform</p>
+
+<a href="terms.html">Terms of Service</a> |
+<a href="privacy.html">Privacy Policy</a>
+
+</footer>
+
+</body>
+</html>
