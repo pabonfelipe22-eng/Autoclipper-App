@@ -13,6 +13,12 @@
 <style>
 
 body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#1a0033,#2b1055,#000000);
+color:white;
+line-height:1.7;
+}
 
 /* NAVBAR */
 
@@ -32,6 +38,15 @@ z-index:1000;
 .logo{
 font-size:22px;
 font-weight:bold;
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:10px;
 }
 
 /* HERO */
@@ -49,12 +64,14 @@ padding:20px;
 .hero h1{
 font-size:55px;
 max-width:900px;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
 max-width:700px;
 margin-top:10px;
+opacity:0.92;
 }
 
 .tiktok-btn{
@@ -66,10 +83,13 @@ background:#fe2c55;
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
+display:inline-block;
 }
 
 .tiktok-btn:hover{
 background:#ff4d73;
+transform:scale(1.03);
 }
 
 /* CONTAINERS */
@@ -85,8 +105,10 @@ padding:80px 20px;
 .box{
 background:rgba(0,0,0,0.55);
 padding:40px;
-border-radius:14px;
+border-radius:18px;
 margin-top:40px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(0,0,0,0.3);
 }
 
 /* FEATURES */
@@ -101,7 +123,12 @@ margin-top:40px;
 .feature{
 background:rgba(0,0,0,0.55);
 padding:30px;
-border-radius:14px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-6px);
 }
 
 /* STEPS */
@@ -116,7 +143,7 @@ margin-top:40px;
 .step{
 background:rgba(0,0,0,0.55);
 padding:30px;
-border-radius:14px;
+border-radius:18px;
 text-align:center;
 }
 
@@ -124,6 +151,7 @@ text-align:center;
 font-size:36px;
 font-weight:bold;
 color:#fe2c55;
+margin-bottom:10px;
 }
 
 /* FOOTER */
@@ -132,6 +160,7 @@ footer{
 text-align:center;
 padding:40px;
 background:rgba(0,0,0,0.75);
+margin-top:80px;
 }
 
 footer a{
@@ -151,8 +180,10 @@ color:#ff4d73;
 <body>
 
 <nav>
-<div class="logo">AutoClipper App</div>
-</nav>
+<div class="logo">
+<img src="logo.png.jpeg" alt="AutoClipper Logo">
+<span>AutoClipper App</span>
+</div></nav>
 
 <!-- HERO -->
 
